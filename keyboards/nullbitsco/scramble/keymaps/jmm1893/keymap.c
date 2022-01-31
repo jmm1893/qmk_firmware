@@ -11,6 +11,7 @@ enum custom_keycodes {
     LEDSWITCH
 };
 
+// double tap kemap
 enum double_tap {
   COPY, LOG
 };
