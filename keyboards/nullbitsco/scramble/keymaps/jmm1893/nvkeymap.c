@@ -113,18 +113,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     //        }
     //        break;
 
-    case LOADCAMERA:
+    case TIMESTAMP:
         if (record->event.pressed) {
 
             register_code(KC_LCTL);
-            register_code(KC_W);
-
+            register_code(KC_LSFT);
+            register_code(KC_S);
           }
           else
           {
             unregister_code(KC_LCTL);
-            unregister_code(KC_W);
-            
+            unregister_code(KC_LSFT);
+            unregister_code(KC_S);
           }
           break;
 
@@ -164,7 +164,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT(
     TD(COPY), PASTE, LEDSWITCH,
-    TD(LOG), LOADCAMERA, KC_SPC
+    TD(LOG), TIMESTAMP, KC_SPC
 )
 
 };
